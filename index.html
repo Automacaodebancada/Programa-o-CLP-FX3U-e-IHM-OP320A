@@ -1,218 +1,213 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programação CLP FX3U e IHM OP320A</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #0f172a;
-            color: #e5e7eb;
-            line-height: 1.6;
-        }
+<title>Programação CLP FX3U e IHM OP320A</title>
 
-        header {
-            background: linear-gradient(135deg, #020617, #0f172a);
-            padding: 40px 20px;
-            text-align: center;
-        }
+<style>
+    body {
+        margin: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background-color: #1c1c1c;
+        color: #f1f1f1;
+        line-height: 1.6;
+    }
 
-        header h1 {
-            color: #38bdf8;
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-        }
+    header {
+        background: linear-gradient(135deg, #111, #2a2a2a);
+        padding: 50px 20px;
+        text-align: center;
+        border-bottom: 4px solid #ff7a00;
+    }
 
-        header p {
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin: auto;
-        }
+    header h1 {
+        font-size: 2.3rem;
+        color: #ff7a00;
+        margin-bottom: 10px;
+    }
 
-        .cta-btn {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 15px 30px;
-            background-color: #22c55e;
-            color: #022c22;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 6px;
-            transition: 0.3s;
-        }
+    header p {
+        max-width: 850px;
+        margin: auto;
+        font-size: 1.1rem;
+        color: #ddd;
+    }
 
-        .cta-btn:hover {
-            background-color: #16a34a;
-        }
+    .cta {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 16px 34px;
+        background-color: #ff7a00;
+        color: #111;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 6px;
+        transition: 0.3s;
+    }
 
-        section {
-            padding: 50px 20px;
-            max-width: 1100px;
-            margin: auto;
-        }
+    .cta:hover {
+        background-color: #e86a00;
+    }
 
-        h2 {
-            color: #38bdf8;
-            margin-bottom: 20px;
-            border-left: 4px solid #38bdf8;
-            padding-left: 10px;
-        }
+    section {
+        max-width: 1100px;
+        margin: auto;
+        padding: 50px 20px;
+    }
 
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
+    h2 {
+        color: #ff7a00;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        border-bottom: 2px solid #ff7a00;
+        display: inline-block;
+        padding-bottom: 6px;
+    }
 
-        ul li::before {
-            content: "✔ ";
-            color: #22c55e;
-            font-weight: bold;
-        }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 22px;
+        margin-top: 25px;
+    }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
+    .card {
+        background-color: #2a2a2a;
+        border: 1px solid #3a3a3a;
+        padding: 22px;
+        border-radius: 8px;
+    }
 
-        .card {
-            background-color: #020617;
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #1e293b;
-        }
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
 
-        .price {
-            font-size: 2rem;
-            color: #22c55e;
-            font-weight: bold;
-        }
+    ul li {
+        margin-bottom: 8px;
+    }
 
-        .guarantee {
-            background-color: #020617;
-            border: 1px solid #22c55e;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-        }
+    ul li::before {
+        content: "▸ ";
+        color: #ff7a00;
+        font-weight: bold;
+    }
 
-        footer {
-            background-color: #020617;
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9rem;
-            color: #94a3b8;
-        }
+    img.curso {
+        max-width: 100%;
+        border-radius: 10px;
+        border: 2px solid #ff7a00;
+    }
 
-        img.course-img {
-            max-width: 100%;
-            border-radius: 10px;
-            border: 1px solid #1e293b;
-        }
-    </style>
+    .price {
+        font-size: 2.2rem;
+        color: #ff7a00;
+        font-weight: bold;
+    }
+
+    .box {
+        background-color: #202020;
+        border: 2px dashed #ff7a00;
+        padding: 25px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    footer {
+        background-color: #111;
+        color: #aaa;
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9rem;
+        border-top: 3px solid #ff7a00;
+    }
+</style>
 </head>
 
 <body>
 
 <header>
     <h1>Programação CLP FX3U e IHM OP320A</h1>
-    <p>Aulas práticas para quem quer sair do zero e aplicar automação industrial na prática</p>
+    <p>
+        Curso prático de automação industrial para quem quer aprender CLP do zero,
+        integrar com IHM e aplicar em projetos reais de indústria.
+    </p>
 
-    <a class="cta-btn" href="https://pay.hotmart.com/H104173141B" target="_blank">
+    <a class="cta" href="https://pay.hotmart.com/H104173141B" target="_blank">
         Quero aprender CLP agora
     </a>
 </header>
 
 <section class="grid">
     <div>
-        <img src="curso.jpg" alt="Curso CLP FX3U e IHM OP320A" class="course-img">
+        <img src="curso.jpg" alt="Curso CLP FX3U" class="curso">
     </div>
 
     <div>
-        <h2>Para quem é este curso?</h2>
+        <h2>Para quem é o curso</h2>
         <ul>
             <li>Iniciantes em automação industrial</li>
             <li>Técnicos e eletricistas</li>
-            <li>Estudantes de elétrica, mecatrônica e automação</li>
+            <li>Estudantes de elétrica e mecatrônica</li>
             <li>Profissionais autônomos</li>
-            <li>Quem quer entrar ou se recolocar no mercado</li>
+            <li>Quem quer entrar no mercado de trabalho</li>
         </ul>
 
-        <p><strong>Pré-requisito:</strong> conhecimento básico em eletricidade.</p>
+        <p><strong>Pré-requisito:</strong> eletricidade básica.</p>
     </div>
 </section>
 
 <section>
-    <h2>O que você vai aprender</h2>
+    <h2>O que você vai dominar</h2>
 
     <div class="grid">
         <div class="card">
-            <h3>Fundamentos</h3>
             <ul>
                 <li>GX Works 2 do zero</li>
-                <li>Endereçamento de I/O</li>
-                <li>Lógica Ladder aplicada à indústria</li>
-                <li>SET, RESET, MOV</li>
-                <li>Temporizadores e contadores (16 e 32 bits)</li>
-                <li>Comparadores</li>
+                <li>Endereçamento de entradas e saídas</li>
+                <li>Lógica Ladder industrial</li>
+                <li>SET, RESET e MOV</li>
+                <li>Temporizadores e contadores</li>
                 <li>Entradas e saídas analógicas</li>
             </ul>
         </div>
 
         <div class="card">
-            <h3>Integração CLP + IHM</h3>
             <ul>
-                <li>Criação de múltiplas telas</li>
-                <li>Conversão de dados (INT, REAL, WORD, DWORD)</li>
+                <li>Integração CLP + IHM OP320A</li>
+                <li>Conversão de dados</li>
                 <li>Operações matemáticas</li>
-                <li>Acionamentos via IHM</li>
+                <li>Múltiplas telas na IHM</li>
             </ul>
         </div>
     </div>
 </section>
 
 <section>
-    <h2>Aplicações reais de automação</h2>
+    <h2>Aplicações industriais reais</h2>
     <ul>
-        <li>Controle de nível com entrada analógica</li>
-        <li>Calculadora industrial</li>
+        <li>Controle de nível com sensor analógico</li>
         <li>Medição de RPM com sensor indutivo e encoder</li>
         <li>Barreira de segurança</li>
-        <li>RTC – Data e Hora</li>
-        <li>Horímetro contador de horas</li>
-        <li>Controle remoto de talha elétrica</li>
-        <li>Termostato digital</li>
+        <li>Horímetro e RTC</li>
         <li>Bomba principal e bomba reserva</li>
-        <li>Sub-rotinas com modo manual e automático</li>
+        <li>Sub-rotinas manual e automática</li>
     </ul>
 </section>
 
 <section>
-    <h2>Diferenciais do curso</h2>
-    <div class="grid">
-        <div class="card">Linguagem simples e direta</div>
-        <div class="card">Foco em prática industrial</div>
-        <div class="card">Projetos reais</div>
-        <div class="card">Didática para quem nunca programou</div>
-        <div class="card">Certificado de conclusão</div>
-    </div>
-</section>
-
-<section>
-    <h2>Quem é o instrutor</h2>
+    <h2>Sobre o instrutor</h2>
     <p>
-        Olá! Meu nome é <strong>Fábio Beneli</strong>.  
-        Atuo há vários anos na área de manutenção elétrica e automação industrial.
+        Meu nome é <strong>Fábio Beneli</strong>.  
         Sou técnico em Mecatrônica e Engenheiro Eletricista, com experiência prática
-        em processos industriais, CLPs, redes e sistemas reais.
+        em manutenção elétrica e automação industrial.
     </p>
-
     <p>
-        Meus cursos são focados em mostrar o que realmente acontece na indústria,
-        com exemplos práticos e aplicáveis ao mercado de trabalho.
+        Ensino automação com foco em aplicação real de indústria,
+        sem enrolação e direto ao ponto.
     </p>
 </section>
 
@@ -220,22 +215,22 @@
     <div>
         <h2>Investimento</h2>
         <p class="price">R$ 49,90</p>
-        <p>Ou parcelamento em até 4x</p>
+        <p>Parcelamento em até 4x</p>
 
-        <a class="cta-btn" href="https://pay.hotmart.com/H104173141B" target="_blank">
+        <a class="cta" href="https://pay.hotmart.com/H104173141B" target="_blank">
             Quero aprender CLP agora
         </a>
     </div>
 
-    <div class="guarantee">
+    <div class="box">
         <h3>Garantia Hotmart</h3>
         <p>7 dias de garantia total</p>
-        <p>Risco zero para você</p>
+        <p>Compra segura</p>
     </div>
 </section>
 
 <footer>
-    © 2026 – Curso Programação CLP FX3U e IHM OP320A  
+    © 2026 – Programação CLP FX3U e IHM OP320A
 </footer>
 
 </body>
